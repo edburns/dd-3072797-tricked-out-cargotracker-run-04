@@ -117,7 +117,7 @@ jobs:
             echo 'echo "CI_STARTED_AT=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_ENV"'
             echo "./mvnw '-P!openliberty' -DskipTests clean compile"
             echo "./scripts/ci/run-dependency-security-gate.sh"
-            echo "./mvnw '-P!openliberty' -Dtest=CargoTest,ItineraryTest,RouteSpecificationTest,HandlingEventTest,HandlingHistoryTest,LayeringTest,BookingFacadeDtoTest clean test"
+            echo "./mvnw '-P!openliberty' -Dtest=CargoTest,ItineraryTest,RouteSpecificationTest,HandlingEventTest,HandlingHistoryTest,LayeringTest,BookingFacadeDtoTest,ChangeArrivalDeadlineDateTest clean test"
             echo "./mvnw -Popenliberty -Dtest=BookingServiceTest clean test"
             echo 'PACKAGE_LOG="ci-artifacts/build-contract/$(date +%Y%m%d-%H%M)-job-logs.txt"; mkdir -p "$(dirname "$PACKAGE_LOG")"; ./mvnw -Popenliberty -DskipTests clean package 2>&1 | tee "$PACKAGE_LOG"'
             echo "./scripts/ci/verify-compatibility-contract.sh"
@@ -139,7 +139,7 @@ jobs:
       - name: Run focused unit tests
         run: >
           ./mvnw '-P!openliberty'
-          -Dtest=CargoTest,ItineraryTest,RouteSpecificationTest,HandlingEventTest,HandlingHistoryTest,LayeringTest,BookingFacadeDtoTest
+          -Dtest=CargoTest,ItineraryTest,RouteSpecificationTest,HandlingEventTest,HandlingHistoryTest,LayeringTest,BookingFacadeDtoTest,ChangeArrivalDeadlineDateTest
           clean test
       - name: Write test inventory
         run: ./scripts/ci/write-test-inventory.sh
@@ -149,7 +149,7 @@ jobs:
         run: |
           count=$(grep -h '<testsuite ' target/surefire-reports/TEST-*.xml | sed -E 's/.*tests="([0-9]+)".*/\1/' | awk '{ total += $1 } END { print total + 0 }')
           skipped=$(grep -ho 'skipped="[0-9]*"' target/surefire-reports/TEST-*.xml | cut -d'"' -f2 | awk '{ total += $1 } END { print total + 0 }')
-          test "$count" -eq 27
+          test "$count" -eq 32
           test "$skipped" -eq 0
       - name: Run Open Liberty integration tests
         run: ./mvnw -Popenliberty -Dtest=BookingServiceTest clean test
