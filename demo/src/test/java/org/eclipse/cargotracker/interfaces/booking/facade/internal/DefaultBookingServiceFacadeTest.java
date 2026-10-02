@@ -14,55 +14,52 @@ import org.junit.jupiter.api.Test;
 
 class DefaultBookingServiceFacadeTest {
 
-    @Test
-    void changeDeadlineConvertsTrackingIdAndPassesThroughDateOnce()
-            throws ReflectiveOperationException {
-        DefaultBookingServiceFacade facade = new DefaultBookingServiceFacade();
-        BookingServiceSpy bookingService = new BookingServiceSpy();
-        Field bookingServiceField = DefaultBookingServiceFacade.class
-                .getDeclaredField("bookingService");
-        bookingServiceField.setAccessible(true);
-        bookingServiceField.set(facade, bookingService);
-        Date arrivalDeadline = new Date(1_700_000_000_000L);
+  @Test
+  void changeDeadlineConvertsTrackingIdAndPassesThroughDateOnce()
+      throws ReflectiveOperationException {
+    DefaultBookingServiceFacade facade = new DefaultBookingServiceFacade();
+    BookingServiceSpy bookingService = new BookingServiceSpy();
+    Field bookingServiceField =
+        DefaultBookingServiceFacade.class.getDeclaredField("bookingService");
+    bookingServiceField.setAccessible(true);
+    bookingServiceField.set(facade, bookingService);
+    Date arrivalDeadline = new Date(1_700_000_000_000L);
 
-        facade.changeDeadline("ABC123", arrivalDeadline);
+    facade.changeDeadline("ABC123", arrivalDeadline);
 
-        assertEquals(1, bookingService.deadlineChangeCalls);
-        assertEquals(new TrackingId("ABC123"), bookingService.trackingId);
-        assertSame(arrivalDeadline, bookingService.arrivalDeadline);
-        assertEquals(arrivalDeadline, bookingService.arrivalDeadline);
+    assertEquals(1, bookingService.deadlineChangeCalls);
+    assertEquals(new TrackingId("ABC123"), bookingService.trackingId);
+    assertSame(arrivalDeadline, bookingService.arrivalDeadline);
+    assertEquals(arrivalDeadline, bookingService.arrivalDeadline);
+  }
+
+  private static class BookingServiceSpy implements BookingService {
+
+    private int deadlineChangeCalls;
+    private TrackingId trackingId;
+    private Date arrivalDeadline;
+
+    @Override
+    public TrackingId bookNewCargo(UnLocode origin, UnLocode destination, Date arrivalDeadline) {
+      return null;
     }
 
-    private static class BookingServiceSpy implements BookingService {
-
-        private int deadlineChangeCalls;
-        private TrackingId trackingId;
-        private Date arrivalDeadline;
-
-        @Override
-        public TrackingId bookNewCargo(
-                UnLocode origin, UnLocode destination, Date arrivalDeadline) {
-            return null;
-        }
-
-        @Override
-        public List<Itinerary> requestPossibleRoutesForCargo(TrackingId trackingId) {
-            return null;
-        }
-
-        @Override
-        public void assignCargoToRoute(Itinerary itinerary, TrackingId trackingId) {
-        }
-
-        @Override
-        public void changeDestination(TrackingId trackingId, UnLocode unLocode) {
-        }
-
-        @Override
-        public void changeDeadline(TrackingId trackingId, Date deadline) {
-            deadlineChangeCalls++;
-            this.trackingId = trackingId;
-            arrivalDeadline = deadline;
-        }
+    @Override
+    public List<Itinerary> requestPossibleRoutesForCargo(TrackingId trackingId) {
+      return null;
     }
+
+    @Override
+    public void assignCargoToRoute(Itinerary itinerary, TrackingId trackingId) {}
+
+    @Override
+    public void changeDestination(TrackingId trackingId, UnLocode unLocode) {}
+
+    @Override
+    public void changeDeadline(TrackingId trackingId, Date deadline) {
+      deadlineChangeCalls++;
+      this.trackingId = trackingId;
+      arrivalDeadline = deadline;
+    }
+  }
 }
