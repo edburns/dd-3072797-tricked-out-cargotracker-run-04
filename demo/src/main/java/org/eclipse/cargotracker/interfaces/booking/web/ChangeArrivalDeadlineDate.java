@@ -55,6 +55,7 @@ public class ChangeArrivalDeadlineDate implements Serializable {
     ParsePosition position = new ParsePosition(0);
     Date parsedDeadlineDate = dateFormat.parse(deadlineDate, position);
     if (parsedDeadlineDate == null
+        || !deadlineDate.matches("\\d{2}/\\d{2}/\\d{4}")
         || position.getIndex() != deadlineDate.length()
         || !deadlineDate.equals(dateFormat.format(parsedDeadlineDate))) {
       throw new IllegalStateException(

@@ -74,6 +74,25 @@ class ChangeArrivalDeadlineDateTest {
   }
 
   @Test
+  void loadSurfacesCargoDeadlineWithOverlongYear() throws ReflectiveOperationException {
+    CargoRoute malformedCargo =
+        new CargoRoute(
+            "ABC123", "Chicago", "Helsinki", new Date(1_700_000_000_000L), false, false, "", "") {
+          @Override
+          public String getArrivalDeadlineDate() {
+            return "02/03/20245";
+          }
+        };
+    FakeBookingServiceFacade facade = new FakeBookingServiceFacade(malformedCargo);
+    ChangeArrivalDeadlineDate editor = editor(facade);
+    editor.setTrackingId("ABC123");
+
+    IllegalStateException exception = assertThrows(IllegalStateException.class, editor::load);
+
+    assertTrue(exception.getMessage().contains("ABC123"));
+  }
+
+  @Test
   void changeArrivalDeadlineRejectsNullDate() throws ReflectiveOperationException {
     FakeBookingServiceFacade facade = new FakeBookingServiceFacade(cargoRoute());
     ChangeArrivalDeadlineDate editor = editor(facade);
