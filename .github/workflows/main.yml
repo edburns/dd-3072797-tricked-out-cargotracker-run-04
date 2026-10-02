@@ -149,7 +149,7 @@ jobs:
         run: |
           count=$(grep -h '<testsuite ' target/surefire-reports/TEST-*.xml | sed -E 's/.*tests="([0-9]+)".*/\1/' | awk '{ total += $1 } END { print total + 0 }')
           skipped=$(grep -ho 'skipped="[0-9]*"' target/surefire-reports/TEST-*.xml | cut -d'"' -f2 | awk '{ total += $1 } END { print total + 0 }')
-          test "$count" -eq 32
+          test "$count" -eq 33
           test "$skipped" -eq 0
       - name: Run Open Liberty integration tests
         run: ./mvnw -Popenliberty -Dtest=BookingServiceTest clean test
