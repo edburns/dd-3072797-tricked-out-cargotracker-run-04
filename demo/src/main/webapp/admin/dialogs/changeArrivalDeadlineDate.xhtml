@@ -31,7 +31,10 @@
                 </h:panelGroup>
 
                 <p:commandButton value="Cancel" action="#{changeArrivalDeadlineDateDialog.cancel()}" />
-                <p:commandButton value="Update" action="#{changeArrivalDeadlineDate.changeArrivalDeadline()}" />
+                <p:commandButton value="Update"
+                                 action="#{changeArrivalDeadlineDate.changeArrivalDeadline()}"
+                                 process="@form"
+                                 update="@form" />
             </h:panelGrid>
         </h:form>
     </div>
