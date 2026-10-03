@@ -1,0 +1,147 @@
+Campaign ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+Lesson propagation: off
+Shepherd-task version: 1.0.4
+Logging shepherd-task-25-given-list run to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502
+=== Shepherding task issue #2 ===
+[shepherd-task] Phase 1: Launching copilot --yolo for task #2
+[shepherd-task] Phase 1 prompt:
+Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:
+
+- TASK_ISSUE: 2
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase1-task-20261002-150208-2.md
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] Found PR #7
+[shepherd-task] Phase 1 VERIFIED: PR #7 is ready. CI passing, no unresolved comments.
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #7
+[shepherd-task] Phase 2 prompt:
+Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:
+
+- TASK_ISSUE: 2
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- REMOTE: origin
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+- PR_NUMBER: 7
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase2-task-20261002-153307-2.md
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #2 has been fully shepherded.
+[shepherd-task] PR #7 merged to edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control.
+=== Shepherding task issue #3 ===
+[shepherd-task] Phase 1: Launching copilot --yolo for task #3
+[shepherd-task] Phase 1 prompt:
+Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:
+
+- TASK_ISSUE: 3
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase1-task-20261002-153810-3.md
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] Found PR #8
+[shepherd-task] Phase 1 VERIFIED: PR #8 is ready. CI passing, no unresolved comments.
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #8
+[shepherd-task] Phase 2 prompt:
+Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:
+
+- TASK_ISSUE: 3
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- REMOTE: origin
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+- PR_NUMBER: 8
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase2-task-20261002-162337-3.md
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #3 has been fully shepherded.
+[shepherd-task] PR #8 merged to edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control.
+=== Shepherding task issue #4 ===
+[shepherd-task] Phase 1: Launching copilot --yolo for task #4
+[shepherd-task] Phase 1 prompt:
+Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:
+
+- TASK_ISSUE: 4
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase1-task-20261002-165618-4.md
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] Found PR #9
+[shepherd-task] Phase 1 VERIFIED: PR #9 is ready. CI passing, no unresolved comments.
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #9
+[shepherd-task] Phase 2 prompt:
+Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:
+
+- TASK_ISSUE: 4
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- REMOTE: origin
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+- PR_NUMBER: 9
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase2-task-20261002-173345-4.md
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] SHEPHERD TASK COMPLETE: Task #4 has been fully shepherded.
+[shepherd-task] PR #9 merged to edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control.
+=== Shepherding task issue #5 ===
+[shepherd-task] Phase 1: Launching copilot --yolo for task #5
+[shepherd-task] Phase 1 prompt:
+Invoke skill `shepherd-task-30-from-assignment-to-ready` with these inputs:
+
+- TASK_ISSUE: 5
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase1-task-20261002-183403-5.md
+[shepherd-task] Phase 1: copilot exited. Verifying semantic outcome and state...
+[shepherd-task] Found PR #10
+[shepherd-task] Phase 1 VERIFIED: PR #10 is ready. CI passing, no unresolved comments.
+[shepherd-task] Phase 2: Launching copilot --yolo for PR #10
+[shepherd-task] Phase 2 prompt:
+Invoke skill `shepherd-task-40-from-ready-to-merged-to-base` with these inputs:
+
+- TASK_ISSUE: 5
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- REMOTE: origin
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+- PR_NUMBER: 10
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/phase2-task-20261002-192223-5.md
+[shepherd-task] Phase 2: copilot exited. Verifying semantic outcome and state...
+Stage 40 reported semantic failure: SHEPHERD FAILED: Installed GitHub CLI does not support the mandatory `@copilot` reviewer token.
+[shepherd-task] FAILED: Phase 2 reported semantic failure.
+[shepherd-task] Stage 50: Generating campaign post-mortem...
+[shepherd-task] Stage 50 report:  /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/20261002-1937-post-mortem.md
+[shepherd-task] Stage 50 session: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/post-mortem-session-20261002-1937.md
+[shepherd-task] Stage 50 events:  /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/post-mortem-session-20261002-1937.jsonl
+[shepherd-task] Stage 50 prompt: Invoke skill `shepherd-task-50-create-post-mortem` with these inputs:
+
+- SHEPHERD_LOG_DIR: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502
+- SCRIPT_EXIT_CODE: 1
+- TASK_ISSUES: 2,3,4,5,6
+- BASE_BRANCH: edburns/dd-3016202-cargotracker-devoxx-be-2026-add-feature-control
+- REPO: edburns/dd-3072797-tricked-out-cargotracker-run-04
+- CAMPAIGN_ID: 26cfa4aa-1dc7-46f3-a995-310bc2c5f60b
+- CAMPAIGN_METADATA_DIRECTORY: 1-arrival-deadline-control-remove-before-merge
+- LESSON_PROPAGATION: off
+
+Write the report to:
+- OUTPUT_FILE: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/20261002-1937-post-mortem.md
+Session exported to: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/post-mortem-session-20261002-1937.md
+[shepherd-task] Stage 50 COMPLETE: Post-mortem created: /Users/edburns/workareas/dd-3072797-tricked-out-cargotracker-run-04-shepherd-control/1-arrival-deadline-control-remove-before-merge/shepherd-tasks-26cfa4aa-1dc7-46f3-a995-310bc2c5f60b-20261002-1502/20261002-1937-post-mortem.md
