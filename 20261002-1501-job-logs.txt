@@ -1,0 +1,2 @@
+Error: Run this script inside the campaign Git worktree.
+Usage: /Users/edburns/.copilot/plugins/shepherd-task/scripts/shepherd-task-25-given-list.sh <TASK_ISSUES> <CAMPAIGN_METADATA_DIRECTORY>
